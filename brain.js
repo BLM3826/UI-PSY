@@ -134,3 +134,25 @@ function setbgnday() {
     return todat;
 }
 document.getElementById("todate").innerHTML = setbgnday();
+
+
+// get the language object from the json file
+var language;
+function getLanguage() {
+    localStorage.getItem("language") == null ? setLanguage("EN") : false;
+    var request = new XMLHttpRequest();
+    request.open('GET', 'assets/textContent/content_' + localStorage.getItem("language") + '.json', false);
+    request.send(null);
+    if (request.status === 200) {
+        language = JSON.parse(request.responseText);
+        // console.log(language);
+        return language;
+    }
+}
+
+// set the language
+function setLanguage(lang) {
+    localStorage.setItem("language", lang);
+    window.location.reload();
+    console.log(getLanguage());
+}

@@ -1,11 +1,35 @@
 class Navbar extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
-        <h5>
-            <a href="">EN</a>
-            <a href="" style="border-left:1px solid #fff">ΕΛ</a>
-        </h5>`;
+    connectedCallback() {
+        function currentLang(lang) {
+            if (localStorage.getItem('language') === lang) {
+                return'underline';
+            } else {
+                return 'none';
+            }
+        }
+        this.innerHTML = `
+            <h5>
+                <a href="#" onclick="setLanguage('EN')" style="text-decoration:${currentLang(
+                  "EN"
+                )}">EN</a>
+                <a href="#" onclick="setLanguage('EL')" style="text-decoration:${currentLang(
+                  "EL"
+                )}; border-left:1px solid #fff">ΕΛ</a>
+            </h5>`;
   }
+}
+
+class SideMenu extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <ul class="list" id="mylist">
+                <li><a href="index.html"><strong>Introduction </strong></a></li>
+                <li><a href="mid.html#top"><strong id="${'current'}">Analysis </strong></a></li>
+                <li><a href="mid.html#examples"><strong>Famous Examples </strong></a></li>
+                <li><a href="mid.html#sumup"><strong>Sum Up </strong></a></li>
+                <li><a href="extra.html"><strong>Extra Footage </strong></a></li>
+            </ul>`;
+    }
 }
 
 class Toe1 extends HTMLElement {
@@ -54,5 +78,6 @@ class Toe3 extends HTMLElement {
 }
 
 customElements.define("lang-navbar", Navbar);
+customElements.define("side-menu", SideMenu);
 customElements.define("toe-one", Toe1);
 customElements.define("toe-three", Toe3);

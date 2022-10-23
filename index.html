@@ -24,19 +24,11 @@
             <a name="top"></a>
             <h1>THE INTERFACE OF A USER’S<br>PSYCHOLOGY</h1>
         </div>
-        <div class="left">
-            <ul class="list" id="mylist">
-                <li><a href="index.html"><strong id="current">Introduction </strong></a></li>
-                <li><a href="mid.html"><strong>Analysis </strong></a></li>
-                <li><a href="mid.html#examples"><strong>Famous Examples </strong></a></li>
-                <li><a href="mid.html#sumup"><strong>Sum Up </strong></a></li>
-                <li><a href="extra.html"><strong>Extra Footage </strong></a></li>
-            </ul>
-        </div>
+        <side-menu class="left"></side-menu>
         <div class="main">
             <div id="p1">
                 <br>
-                <p>Συχνά χρησιμοποιούμε την φράση «μην κρίνεις ένα βιβλιο από το εξώφυλλό του», αλλά τι παραπάνω προσφέρει το εξώφυλλο ενός βιβλίου πέραν από το να σε κάνει να εχεις έναν ακόμα λόγο να θες να το διαβάσεις;
+                <p id="intro1">
                 </p>
             </div>
             <picture>
@@ -44,10 +36,9 @@
                 <img id="book" src="assets/book.png" alt="book" width="200">
             </picture>
             <div id="p2">
-                <h4 id="q1"><em><br>“Γιατι έχουμε την ασυναίσθητη τάση να απορρίπτουμε κάτι μολις το δούμε <br>και να
-                        λατρεύουμε κάτι άλλο «με τη πρώτη ματιά»;”</em></h4>
-                <h4 id="q2"><em><br>“Είναι οι πιο διάσημες εφαρμογές , οι πιο χρήσιμες;”</h3></em></h4>
-                <br><br>Ένα <a id="wedclr" href="mid.html">άρθρο</a> του Βασίλη Μπάλλα.<br><br>
+                <h4 id="q1"><em id="intro2"></em></h4>
+                <h4 id="q2"><em id="intro3"></em></h4>
+                <span id="introEnd"></span>
             </div>
         </div>
         <div class="footer">
@@ -62,6 +53,14 @@
         </div>
     </div>
     <script src="brain.js"></script>
+    <script>
+        var lang = getLanguage();
+        console.log(lang);
+        document.getElementById("intro1").innerHTML = lang.intro1;
+        document.getElementById("intro2").innerHTML = lang.intro2;
+        document.getElementById("intro3").innerHTML = lang.intro3;
+        document.getElementById("introEnd").innerHTML = lang.introEnd;
+    </script>
 </body>
 
 </html>

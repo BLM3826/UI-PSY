@@ -1,449 +1,470 @@
 @font-face {
-    font-family: myfont;
-    src: url('assets/SourceSerifPro-Regular.otf');
+  font-family: myfont;
+  src: url("assets/SourceSerifPro-Regular.otf");
 }
 
 @font-face {
-    font-family: quoteFont;
-    src: url('assets/acaslonpro-semibolditalic.otf');
+  font-family: quoteFont;
+  src: url("assets/acaslonpro-semibolditalic.otf");
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: myfont;
+  font-size: medium;
+  background-image: url(assets/bg.jfif);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.navbar {
+    overflow: hidden;
     font-family: myfont;
-    font-size: medium;
-    background-image: url(assets/bg.jfif);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+}
+
+.navbar h5 a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  font-family: myfont;
+}
+
+.navbar h5 a:hover {
+  /* text-decoration: underline; */
+    color: #000;
 }
 
 .header {
-    grid-area: header;
-    font-size: 38px;
+  grid-area: header;
+  font-size: 38px;
 }
 
 .extra .header h1 {
-    float: left;
-    font-size: 30px;
-    padding-left: 50px;
+  float: left;
+  font-size: 30px;
+  padding-left: 50px;
 }
 
 .mid .header {
-    position: relative;
-    width: 100%;
-    height: 45vh;
-    overflow: hidden;
+  /* position: relative; */
+  width: 100%;
+  height: 45vh;
+  overflow: hidden;
 }
 
-#bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(assets/uxui.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+#analysis {
+  position: relative;
+  /* top: 0; */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(assets/uxui.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .left {
-    grid-area: menu;
-    padding: 20px 120px 0 0;
-    height: 100%;
-    border-left: solid;
-    border-color: darkgoldenrod;
-    margin-left: 40px;
-    position: relative;
+  grid-area: menu;
+  padding: 20px 120px 0 0;
+  height: 100%;
+  border-left: solid;
+  border-color: darkgoldenrod;
+  margin-left: 40px;
+  position: relative;
 }
 
 .list {
-    text-align: left;
-    margin-top: 40px;
-    /* margin: 0; */
-    /* left: 30px; */
-    top: 0;
-    overflow: hidden;
-    line-height: 45px;
-    font-size: 15px;
-    position: absolute;
+  text-align: left;
+  margin-top: 40px;
+  /* margin: 0; */
+  /* left: 30px; */
+  top: 0;
+  overflow: hidden;
+  line-height: 45px;
+  font-size: 15px;
+  position: absolute;
 }
 
 .mid .list,
 .extra .list {
-    top: 55px;
+  top: 55px;
 }
 
 .sticky {
-    position: fixed;
-    top: 55px;
-    width: 100%;
-    padding-top: 102px;
+  position: fixed;
+  top: 55px;
+  width: 100%;
+  padding-top: 102px;
 }
 
 #current {
-    font-size: 25px;
-    border-left: solid;
-    border-color: darkgoldenrod;
-    line-height: 35px;
+  font-size: 25px;
+  border-left: solid;
+  border-color: darkgoldenrod;
+  line-height: 35px;
 }
 
 .main {
-    grid-area: main;
-    /* padding: 20px 20px 20px 20px; */
-    font-size: 30px;
+  grid-area: main;
+  /* padding: 20px 20px 20px 20px; */
+  font-size: 30px;
 }
 
 .footer {
-    margin: 20px 40px 0 40px;
-    grid-area: footer;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin: 20px 40px 0 40px;
+  grid-area: footer;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .toe1 {
-    margin: 10px 0 0 40px;
-    padding-left: 5px;
-    text-align: left;
+  margin: 10px 0 0 40px;
+  padding-left: 5px;
+  text-align: left;
 }
 
 .toe10 {
-    border-left: solid;
-    border-color: darkgoldenrod;
-    padding-left: 5px;
+  border-left: solid;
+  border-color: darkgoldenrod;
+  padding-left: 5px;
 }
 
 .toe11 {
-    border-left: solid;
-    border-color: darkgoldenrod;
-    padding-left: 5px;
+  border-left: solid;
+  border-color: darkgoldenrod;
+  padding-left: 5px;
 }
 
 .toe12 {
-    border-left: solid;
-    border-color: darkgoldenrod;
-    padding-left: 5px;
+  border-left: solid;
+  border-color: darkgoldenrod;
+  padding-left: 5px;
 }
 
 .toe2 {
-    margin: 10px 0 10px 10%;
-    border-left: solid;
-    border-color: darkgoldenrod;
-    text-align: right;
+  margin: 10px 0 10px 10%;
+  border-left: solid;
+  border-color: darkgoldenrod;
+  text-align: right;
 }
 
 #n1 {
-    font-family: quoteFont;
-    padding-left: 20px;
+  font-family: quoteFont;
+  padding-left: 20px;
 }
 
 #n {
-    padding-left: 5px;
-    text-align: left;
-    font-size: smaller;
+  padding-left: 5px;
+  text-align: left;
+  font-size: smaller;
 }
 
 .toe3 {
-    margin: 10px 40px;
-    /* padding-left: 5px; */
-    border-left: solid;
-    border-color: darkgoldenrod;
+  margin: 10px 40px;
+  /* padding-left: 5px; */
+  border-left: solid;
+  border-color: darkgoldenrod;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-areas: 'header header header header header header' 'menu main main main main main' 'footer footer footer footer footer footer';
-    grid-template-columns: 16%;
-    /* grid-row-gap: 20px; */
-    /* background-color: #2196F3; 
+  display: grid;
+  grid-template-areas: "header header header header header header" "menu main main main main main" "footer footer footer footer footer footer";
+  grid-template-columns: 16%;
+  /* grid-row-gap: 20px; */
+  /* background-color: #2196F3; 
   padding: 10px; */
 }
 
-.grid-container>div {
-    text-align: center;
+.grid-container > div {
+  text-align: center;
 }
 
 .left ul {
-    list-style: none;
-    padding: 10px 20px 0px 20px;
+  list-style: none;
+  padding: 10px 20px 0px 20px;
 }
 
 #q1 {
-    text-align: left;
+  text-align: left;
 }
 
 #q2 {
-    text-align: right;
+  text-align: right;
 }
 
 .main h4 {
-    color: rgb(90, 90, 90);
-    filter: drop-shadow(0px 10px 5px grey);
+  color: rgb(90, 90, 90);
+  filter: drop-shadow(0px 10px 5px grey);
 }
 
 .main p,
 h4,
 #q {
-    padding-right: 150px;
+  padding-right: 150px;
 }
 
 a:link {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 a:visited {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .main a:link {
-    color: chocolate;
-    text-decoration: none;
+  color: chocolate;
+  text-decoration: none;
 }
 
 .main a:visited {
-    color: chocolate;
-    text-decoration: none;
+  color: chocolate;
+  text-decoration: none;
 }
 
 .main a:hover {
-    color: black;
+  color: black;
 }
 
 #btn {
-    position: sticky;
-    float: right;
-    bottom: 50px;
-    right: 50px;
-    font-size: 12px;
-    border: none;
-    background: none;
-    padding: 10px 10px 10px 10px;
-    /* background-color: rgba(100,100,100, 0.5); */
-    /* border-radius: 100%; */
+  position: sticky;
+  float: right;
+  bottom: 50px;
+  right: 50px;
+  font-size: 12px;
+  border: none;
+  background: none;
+  padding: 10px 10px 10px 10px;
+  /* background-color: rgba(100,100,100, 0.5); */
+  /* border-radius: 100%; */
 }
 
 #btn:hover {
-    filter: drop-shadow(0 0px 5px aqua);
+  filter: drop-shadow(0 0px 5px aqua);
 }
 
 .media ul li {
-    display: inline;
-    margin: 0 5px;
+  display: inline;
+  margin: 0 5px;
 }
 
 .aueb,
 .eclass,
 .fb,
 .insta {
-    margin-top: .625em;
-    width: 40px;
-    height: 40px;
-    opacity: .6;
-    border-radius: 25px;
+  margin-top: 0.625em;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  border-radius: 25px;
 }
 
 .fb:hover,
 .insta:hover,
 .aueb:hover,
 .eclass:hover {
-    opacity: 1.0;
+  opacity: 1;
 }
 
-
 .message {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .message .mtext {
-    visibility: hidden;
-    width: 150px;
-    background-color: gray;
-    color: #fff;
-    text-align: center;
-    border-top-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    position: absolute;
-    z-index: 1;
-    top: -15px;
-    left: 110%;
-    opacity: 0;
-    transition: opacity 1s;
+  visibility: hidden;
+  width: 150px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: -15px;
+  left: 110%;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 .message .mtext::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent gray transparent transparent;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent gray transparent transparent;
 }
 
 .message:hover .mtext {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 1.5s;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1.5s;
 }
 
 @media screen and (max-width: 1069px) {
-    .header {
-        font-size: 3.5vw;
-    }
+  .header {
+    font-size: 3.5vw;
+  }
 }
 
 @media screen and (max-width: 900px) {
-    #book {
-        max-width: 200px;
-        width: 40vw;
-    }
-    #q {
-        float: left;
-    }
-    #boag {
-        width: 70vw;
-        height: 35vh;
-    }
-    #ceo {
-        width: 70vw;
-        height: 35vh;
-    }
-    .grid-container {
-        display: grid;
-        grid-template-areas: 'menu' 'header' 'main' 'footer';
-        grid-template-columns: none;
-        overflow: hidden;
-    }
-    html {
-        padding-top: 50px;
-    }
-    .header {
-        font-size: 3.5vw;
-    }
-    .header img {
-        width: 95vw;
-        height: 68vw;
-    }
-    .extra .header h1 {
-        font-size: 4vw;
-    }
-    .left {
-        border-left: none;
-        padding: 0;
-        margin: 0 0 0 0;
-        z-index: 1;
-        position: relative;
-    }
-    .list {
-        background-color: darkcyan;
-        position: fixed;
-        left: 0px;
-        top: -45px;
-        text-align: left;
-        width: 100%;
-    }
-    .mid .list,
-    .extra .list {
-        top: -45px;
-    }
-    .list a:link,
-    .list a:visited {
-        padding: 0 1vw 0 2.5vw;
-    }
-    .list li {
-        font-size: 2.5vw;
-        display: inline;
-        border-bottom: solid;
-        padding-bottom: 5px;
-        text-shadow: 2px 2px 2px #555;
-    }
-    #current {
-        font-size: 3.2vw;
-        padding-bottom: 5px;
-        border-left: none;
-        border-bottom-style: double;
-        text-shadow: none;
-    }
-    .main {
-        font-size: 4vw;
-    }
-    .main p,
-    h4,
-    #q {
-        padding-right: 0;
-    }
-    #btn {
-        visibility: hidden;
-    }
-    .footer {
-        flex-direction: column-reverse;
-        margin: 0 10vw 0 10vw;
-    }
-    .toe3 {
-        border-bottom: solid;
-        border-left: none;
-        border-color: darkgoldenrod;
-        float: left;
-        width: 90%;
-    }
-    .media ul {
-        padding-right: 40px;
-    }
-    .toe2 {
-        border-bottom: solid;
-        border-left: none;
-        border-color: darkgoldenrod;
-        margin: 0px 10vw 10px 10vw;
-        width: 90%;
-    }
-    #n1 {
-        padding-right: 10vw;
-    }
-    .extra #n1 {
-        padding-right: 6vw;
-    }
-    #n {
-        padding-left: 10vw;
-    }
-    .toe10,
-    .toe11,
-    .toe12 {
-        border-left: none;
-        padding-right: 40px;
-        text-align: center;
-    }
-    .toe1 {
-        width: 100%;
-    }
+  #book {
+    max-width: 200px;
+    width: 40vw;
+  }
+  #q {
+    float: left;
+  }
+  #boag {
+    width: 70vw;
+    height: 35vh;
+  }
+  #ceo {
+    width: 70vw;
+    height: 35vh;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-areas: "menu" "header" "main" "footer";
+    grid-template-columns: none;
+    overflow: hidden;
+  }
+  html {
+    padding-top: 50px;
+  }
+  .header {
+    font-size: 3.5vw;
+  }
+  .header img {
+    width: 95vw;
+    height: 68vw;
+  }
+  .extra .header h1 {
+    font-size: 4vw;
+  }
+  .left {
+    border-left: none;
+    padding: 0;
+    margin: 0 0 0 0;
+    z-index: 1;
+    position: relative;
+  }
+  .list {
+    background-color: darkcyan;
+    position: fixed;
+    left: 0px;
+    top: -45px;
+    text-align: left;
+    width: 100%;
+  }
+  .mid .list,
+  .extra .list {
+    top: -45px;
+  }
+  .list a:link,
+  .list a:visited {
+    padding: 0 1vw 0 2.5vw;
+  }
+  .list li {
+    font-size: 2.5vw;
+    display: inline;
+    border-bottom: solid;
+    padding-bottom: 5px;
+    text-shadow: 2px 2px 2px #555;
+  }
+  #current {
+    font-size: 3.2vw;
+    padding-bottom: 5px;
+    border-left: none;
+    border-bottom-style: double;
+    text-shadow: none;
+  }
+  .main {
+    font-size: 4vw;
+  }
+  .main p,
+  h4,
+  #q {
+    padding-right: 0;
+  }
+  #btn {
+    visibility: hidden;
+  }
+  .footer {
+    flex-direction: column-reverse;
+    margin: 0 10vw 0 10vw;
+  }
+  .toe3 {
+    border-bottom: solid;
+    border-left: none;
+    border-color: darkgoldenrod;
+    float: left;
+    width: 90%;
+  }
+  .media ul {
+    padding-right: 40px;
+  }
+  .toe2 {
+    border-bottom: solid;
+    border-left: none;
+    border-color: darkgoldenrod;
+    margin: 0px 10vw 10px 10vw;
+    width: 90%;
+  }
+  #n1 {
+    padding-right: 10vw;
+  }
+  .extra #n1 {
+    padding-right: 6vw;
+  }
+  #n {
+    padding-left: 10vw;
+  }
+  .toe10,
+  .toe11,
+  .toe12 {
+    border-left: none;
+    padding-right: 40px;
+    text-align: center;
+  }
+  .toe1 {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 405px) {
-    .extra .header h1 {
-        padding-top: 50px;
-        font-size: 5vw;
-    }
-    .list li {
-        font-size: 1.5vw;
-    }
-    #current {
-        font-size: 3vw;
-    }
-    .list a:link,
-    .list a:visited {
-        padding: 0 0.5vw 0 1vw;
-    }
+  .extra .header h1 {
+    padding-top: 50px;
+    font-size: 5vw;
+  }
+  .list li {
+    font-size: 1.5vw;
+  }
+  #current {
+    font-size: 3vw;
+  }
+  .list a:link,
+  .list a:visited {
+    padding: 0 0.5vw 0 1vw;
+  }
 
-    .media ul {
-        width: 50%;
-        padding-left: 70px;
-    }
+  .media ul {
+    width: 50%;
+    padding-left: 70px;
+  }
 }

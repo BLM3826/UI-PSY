@@ -24,7 +24,7 @@ class SideMenu extends HTMLElement {
         this.innerHTML = `
         <ul class="list" id="mylist">
                 <li><a href="index.html"><strong>Introduction </strong></a></li>
-                <li><a href="mid.html#top"><strong id="${'current'}">Analysis </strong></a></li>
+                <li><a href="mid.html#top"><strong>Analysis </strong></a></li>
                 <li><a href="mid.html#examples"><strong>Famous Examples </strong></a></li>
                 <li><a href="mid.html#sumup"><strong>Sum Up </strong></a></li>
                 <li><a href="extra.html"><strong>Extra Footage </strong></a></li>

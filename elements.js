@@ -44,7 +44,7 @@ class Toe1 extends HTMLElement {
                 <div class="toe12">
                     <div class="message"><a href="javascript:show_msg()">Privacy Policy</a>
                         <span class="mtext">We won't try<br>to steal your data.</span>
-                    </div> <br>© 2020 Master
+                    </div> <br>© 2020 Ballas
                 </div>`;
   }
 }
